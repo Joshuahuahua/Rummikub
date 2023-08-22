@@ -1,0 +1,91 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(18, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 10px;
+  padding: 10px;
+  height: 45vh;
+  width: 100%;
+
+  border: 2px solid #127e48;
+    margin-bottom: 10px;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    button {
+      background-color: #127e48;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      box-shadow: -5px 5px 3px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        background-color: #0b460b;
+        box-shadow: -2px 2px 3px rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+}
+
+.Board {
+  //   background-color: #0b460b; // Green
+  background-color: #16297e; // Blue
+  height: 100vh-15.4vh;
+  display: flex;
+  padding: 10px;
+  color: white;
+
+//   align-items: center;
+  justify-content: center;
+
+  //   Background Texture
+  background-image: repeating-linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.1) 1px,
+      transparent 1px,
+      transparent 60px
+    ),
+    repeating-linear-gradient(
+      60deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.1) 1px,
+      transparent 1px,
+      transparent 60px
+    ),
+    linear-gradient(
+      60deg,
+      rgba(0, 0, 0, 0.1) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgba(0, 0, 0, 0.1) 75%,
+      rgba(0, 0, 0, 0.1)
+    ),
+    linear-gradient(
+      120deg,
+      rgba(0, 0, 0, 0.1) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgba(0, 0, 0, 0.1) 75%,
+      rgba(0, 0, 0, 0.1)
+    );
+  background-size: 70px 120px;
+}
